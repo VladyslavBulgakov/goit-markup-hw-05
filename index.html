@@ -64,11 +64,19 @@
         
         <div class="container">
         <h1 class="hero-text">ЭФФЕКТИВНЫЕ РЕШЕНИЯ ДЛЯ ВАШЕГО БИЗНЕСА</h1>
-        <button type="button" class="order">Заказать услугу</button>
+        <button type="button" class="order" data-modal-open>Заказать услугу</button>
       </div>    
       </section>
        
-      
+      <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+          <button class="button-close-modal" data-modal-close>
+            <svg width="18" height="18">
+              <use href="./images/sprite.svg#icon-close-black"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
        
 
       <!--Features-->
@@ -487,5 +495,6 @@
 
       document.body.style.paddingTop = `${pageHeaderHeight}px`;
     </script>
+     <script src="./js/modal.js"></script>
   </body>
 </html>
