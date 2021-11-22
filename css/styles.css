@@ -141,7 +141,8 @@ a {
   position: relative;
 }
 
-.link:hover:after {
+.link:hover:after,
+.link:focus:after {
   position: absolute;
   bottom: -1px;
   left: 0;
@@ -154,19 +155,7 @@ a {
   border-radius: 2px;
 }
 
-.studio-title:after {
-  position: absolute;
-  content: '';
-  bottom: -1px;
-  left: 0;
-
-  width: 100%;
-  height: 4px;
-  background-color: var(--accent-color);
-  border-radius: 2px;
-}
-
-.portfolio-title::after {
+.current:after {
   position: absolute;
   content: '';
   bottom: -1px;
@@ -887,7 +876,16 @@ footer {
   color: #ffffff;
 }
 
-.portfolio-item:hover .project-description-overlay {
+/* .portfolio-item:hover .project-description-overlay,
+.portfolio-item:hover .photo-link {
+  transform: translateY(0);
+  transition: transform 250ms ease;
+
+  background-color: rgba(33, 150, 243, 0.9);
+} */
+
+.photo-link:hover .project-description-overlay,
+.photo-link:focus .project-description-overlay {
   transform: translateY(0);
   transition: transform 250ms ease;
 
