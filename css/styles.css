@@ -340,17 +340,13 @@ button {
 
   border-radius: 4px;
 
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
-  transition: background-color 250ms var(--transition-timing-function),
-    color 250ms var(--transition-timing-function);
+  transition: box-shadow 250ms var(--transition-timing-function);
 }
 
 .order:hover,
 .order:focus,
 .order:active {
-  color: var(--title-text-color);
-  background-color: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* -------modal------- */
@@ -375,7 +371,7 @@ button {
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(1.1);
+  transform: translate(-50%, -50%) scale(1.5) rotate(-90deg);
 }
 
 .modal {
@@ -391,8 +387,7 @@ button {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  transform: scale(1) translate(-50%, -50%);
-
+  transform: scale(1) translate(-50%, -50%) rotate(0);
   transition: transform 250ms var(--transition-timing-function);
 }
 
@@ -962,8 +957,14 @@ transition: background-color 250ms var(--transition-timing-function),
   border-radius: 4px;
   transition: border 250ms var(--transition-timing-function);
 }
-.icon-logo-link:hover,
-.icon-logo-link:focus {
+.icon-item .icon-logo-link {
+  transform: scale(1);
+  transition: transform 250ms var(--transition-timing-function),
+    border 250ms var(--transition-timing-function);
+}
+
+.icon-item:hover .icon-logo-link {
+  transform: scale(1.05);
   border: 1px solid var(--accent-color);
 }
 
@@ -984,5 +985,36 @@ transition: background-color 250ms var(--transition-timing-function),
 .icon-item:not(:last-child) {
   margin-right: 30px;
 }
-
 /* -------test------- */
+/* .form {
+  width: 600px;
+  outline: 1px solid tomato;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 20px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+
+  outline: 1px solid blue;
+  margin-bottom: 20px;
+}
+
+.form-field input {
+  margin: 0;
+  padding: 10px 20px;
+  border-radius: 3px;
+  border: 1px solid teal;
+  font-size: 20px;
+}
+
+.form-field label {
+  margin-bottom: 5px;
+}
+
+.form-field input::placeholder {
+  color: #2a2a2a;
+  text-align: center;
+} */
