@@ -963,8 +963,9 @@ transition: background-color 250ms var(--transition-timing-function),
     border 250ms var(--transition-timing-function);
 }
 
-.icon-item:hover .icon-logo-link {
-  transform: scale(1.05);
+.icon-item:hover .icon-logo-link,
+.icon-item:focus-within .icon-logo-link {
+  transform: scale(1.1);
   border: 1px solid var(--accent-color);
 }
 
